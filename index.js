@@ -24,3 +24,17 @@ const products = [
 products.forEach((product) => {
   console.log(product.name), console.log(Math.trunc(product.price * 1.1));
 });
+const categories = [];
+products.forEach((product) => {
+  if (!categories.includes(product.category)) {
+    categories.push(product.category);
+  }
+});
+console.log("Unique Categories:", categories);
+const electronics = products.filter(
+  (product) => product.category === "Electronics"
+);
+console.log("Electronics:", electronics);
+const expensiveProducts = products.filter((product) => product.price > 300);
+console.log("Expensive Products:", expensiveProducts);
+const highlyRatedProducts = products.filter((product) => product.rating > 4.4);
