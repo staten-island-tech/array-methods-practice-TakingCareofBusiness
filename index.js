@@ -1,9 +1,9 @@
-const students = [
-  { name: "Alice", age: 20, grade: 85 },
-  { name: "Bob", age: 22, grade: 90 },
-  { name: "Charlie", age: 21, grade: 78 },
-  { name: "Diana", age: 23, grade: 95 },
-];
+//const students = [
+//{ name: "Alice", age: 20, grade: 85 },
+//{ name: "Bob", age: 22, grade: 90 },
+//{ name: "Charlie", age: 21, grade: 78 },
+//{ name: "Diana", age: 23, grade: 95 },
+//];
 const topStudents = students.filter((student) => student.grade > 80);
 console.log(topStudents);
 const youngStudents = students.filter((student) => student.age < 22);
@@ -21,6 +21,7 @@ const products = [
   { name: "Chair", price: 250, category: "Furniture", rating: 4.0 },
   { name: "Desk", price: 450, category: "Furniture", rating: 4.8 },
 ];
+
 products.forEach((product) => {
   console.log(product.name), console.log(product.price);
 });
