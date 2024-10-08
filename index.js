@@ -4,14 +4,13 @@
 //{ name: "Charlie", age: 21, grade: 78 },
 //{ name: "Diana", age: 23, grade: 95 },
 //];
-const topStudents = students.filter((student) => student.grade > 80);
-console.log(topStudents);
-const youngStudents = students.filter((student) => student.age < 22);
-console.log(youngStudents);
-students;
-students
-  .filter((student) => student.grade > 80 && student.age < 22)
-  .forEach((student) => console.log(student));
+//const topStudents = students.filter((student) => student.grade > 80);
+//console.log(topStudents);
+//const youngStudents = students.filter((student) => student.age < 22);
+//console.log(youngStudents);
+//students
+//.filter((student) => student.grade > 80 && student.age < 22)
+//.forEach((student) => console.log(student));
 const products = [
   { name: "Laptop", price: 1200, category: "Electronics", rating: 4.5 },
   { name: "Phone", price: 800, category: "Electronics", rating: 4.7 },
@@ -23,5 +22,5 @@ const products = [
 ];
 
 products.forEach((product) => {
-  console.log(product.name), console.log(product.price);
+  console.log(product.name), console.log(Math.trunc(product.price * 1.1));
 });
