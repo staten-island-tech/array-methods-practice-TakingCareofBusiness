@@ -4,6 +4,7 @@
 //{ name: "Charlie", age: 21, grade: 78 },
 //{ name: "Diana", age: 23, grade: 95 },
 //];
+//students.forEach((student) => console.log(student.name, student.grade));
 //const topStudents = students.filter((student) => student.grade > 80);
 //console.log(topStudents);
 //const youngStudents = students.filter((student) => student.age < 22);
@@ -21,20 +22,29 @@ const products = [
   { name: "Desk", price: 450, category: "Furniture", rating: 4.8 },
 ];
 
-products.forEach((product) => {
-  console.log(product.name), console.log(Math.trunc(product.price * 1.1));
-});
-const categories = [];
-products.forEach((product) => {
-  if (!categories.includes(product.category)) {
-    categories.push(product.category);
-  }
-});
-console.log("Unique Categories:", categories);
-const electronics = products.filter(
-  (product) => product.category === "Electronics"
-);
-console.log("Electronics:", electronics);
-const expensiveProducts = products.filter((product) => product.price > 300);
-console.log("Expensive Products:", expensiveProducts);
-const highlyRatedProducts = products.filter((product) => product.rating > 4.4);
+//products.forEach((product) => {
+//console.log(product.name), console.log(Math.trunc(product.price * 1.1));
+//});
+//const categories = [];
+//products.forEach((product) => {
+//if (!categories.includes(product.category)) {
+//categories.push(product.category);
+//}
+//});
+//console.log("Unique Categories:", categories);
+//const electronics = products.filter(
+//(product) => product.category === "Electronics"
+//);
+//console.log("Electronics:", electronics);
+//const expensiveProducts = products.filter((product) => product.price > 300);
+//console.log("Expensive Products:", expensiveProducts);
+console.log("Highly Rated Products");
+products
+  .filter((product) => product.rating >= 4.5)
+  .forEach((product) => console.log(product.name));
+console.log("Electronics cheaper than 1000$");
+products
+  .filter(
+    (product) => product.category === "Electronics" && product.price < 1000
+  )
+  .forEach((product) => console.log(product));
